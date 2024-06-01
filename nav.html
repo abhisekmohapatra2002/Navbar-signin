@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="demo-nav.css">
+    <title>Nav</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navigation">
+            <div class="menu-toggle"></div>
+            <ul class="list active">
+    
+                <li class="list-item " style="--clr:rgb(240, 71, 59);">
+                    <a href="#">
+                        <span class="icon">
+                          <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <a href="#">
+                            <span class="text">Home</span>
+                        </a>
+                    </a>
+                </li>
+    
+                <li class="list-item style" style="--clr:rgb(255, 161, 23);">
+                    <a href="#">
+                        <span class="icon">
+                          <ion-icon name="alert-outline"></ion-icon>
+                        </span>
+                        <a href="#">
+                            <span class="text">About</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item style" style="--clr:rgb(12, 181, 204);">
+                    <a href="#">
+                        <span class="icon">
+                           <ion-icon name="book-outline"></ion-icon>
+                        </span>
+                        <a href="#">
+                            <span class="text">Academics</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item style" style="--clr:rgb(177, 69, 233);">
+                    <a href="#">
+                        <span class="icon">
+                          <ion-icon name="reader-outline"></ion-icon>
+                        </span>
+                        <a href="#">
+                            <span class="text">Admission Open</span>
+                        </a>
+                    </a>
+                </li>
+
+                <li class="list-item style" style="--clr:rgb(15, 199, 15);">
+                    <a href="#">
+                        <span class="icon">
+                          <ion-icon name="call-outline"></ion-icon>
+                        </span>
+                        <a href="#">
+                          <span class="text">Contact</span>
+                        </a>  
+                    </a>
+                </li>
+
+                <li class="list-item style" style="--clr:rgb(33, 150, 243);">
+                    <a href="#">
+                        <span class="icon">
+                          <ion-icon name="grid-outline"></ion-icon>
+                        </span>
+                        <a href="signin.html" target="_blank">
+                         <span class="text">  Sign in</span>
+                        </a>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function() {
+        navigation.classList.toggle('open')
+        }
+
+        const listItems = document.querySelectorAll('.list-item');
+        function activelink() {
+            listItems.forEach((item) => 
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        listItems.forEach((item) =>
+        item.addEventListener('click',activelink))
+     
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
